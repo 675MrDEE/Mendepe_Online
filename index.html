@@ -3,66 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tsunami - Available Links</title>
+    <title>Tsunami</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img class="logo"  src="tsunami.png"/>
-        <nav>
-            <a href="index.html">Available Links</a>
-            <a href="sell.html">Sell a Link</a>
-        </nav>
-    </header>
-    <main>
-        
-            
-       
-        <section "id="link-list">
-            <h2>&nbsp</h2>
-            <section id="search-bar">
+        <img class="img" src="tsunami.png"/>
+        <section id="search-bar">
             <input type="text" id="search-input" placeholder="Search links...">
         </section>
-            <button class="accordion">Books</button>
-            <div class="panel" id="books-category">
-                <ul>
-                    <!-- Book links will be dynamically inserted here -->
-                </ul>
+    </header>
+    
+    <main>
+        
+        <section id="link-list" style="padding-top: 20px;">
+            <h2>Available Links</h2>
+            <div class="category" style="padding-top:20px;">
+                <button class="accordion">Books</button>
+                <div class="panel" id="books-category">
+                    <ul>
+                        <!-- Book links will be dynamically inserted here -->
+                    </ul>
+                </div>
             </div>
-            <button class="accordion">Courses</button>
-            <div class="panel" id="courses-category">
-                <ul>
-                    <!-- Course links will be dynamically inserted here -->
-                </ul>
+            <div class="category">
+                <button class="accordion">Courses</button>
+                <div class="panel" id="courses-category">
+                    <ul>
+                        <!-- Course links will be dynamically inserted here -->
+                    </ul>
+                </div>
             </div>
-            <button class="accordion">Software</button>
-            <div class="panel" id="software-category">
-                <ul>
-                    <!-- Software links will be dynamically inserted here -->
-                </ul>
+            <div class="category">
+                <button class="accordion">Software</button>
+                <div class="panel" id="software-category">
+                    <ul>
+                        <!-- Software links will be dynamically inserted here -->
+                    </ul>
+                </div>
             </div>
-            <button class="accordion">Games</button>
-            <div class="panel" id="games-category">
-                <ul>
-                    <!-- Game links will be dynamically inserted here -->
-                </ul>
+            <div class="category">
+                <button class="accordion">Games</button>
+                <div class="panel" id="games-category">
+                    <ul>
+                        <!-- Game links will be dynamically inserted here -->
+                    </ul>
+                </div>
             </div>
-            <button class="accordion">Movies</button>
-            <div class="panel" id="movies-category">
-                <ul>
-                    <!-- Movie links will be dynamically inserted here -->
-                </ul>
+            <div class="category">
+                <button class="accordion">Movies</button>
+                <div class="panel" id="movies-category">
+                    <ul>
+                        <!-- Movie links will be dynamically inserted here -->
+                    </ul>
+                </div>
             </div>
-            <button class="accordion">Music</button>
-            <div class="panel" id="music-category">
-                <ul>
-                    <!-- Music links will be dynamically inserted here -->
-                </ul>
+            <div class="category">
+                <button class="accordion">Music</button>
+                <div class="panel" id="music-category">
+                    <ul>
+                        <!-- Music links will be dynamically inserted here -->
+                    </ul>
+                </div>
             </div>
+        </section>
+        <h1>&nbsp</h1>
+        <section id="add-link">
+            <h2>Sell a Link</h2>
+            <form id="link-form">
+                <label for="link-url">Link URL:</label>
+                <input type="url" id="link-url" name="link-url" required>
+                
+                <label for="link-description">Description:</label>
+                <input type="text" id="link-description" name="link-description" required>
+                
+                <label for="link-price">Price (PGK):</label>
+                <input type="number" id="link-price" name="link-price" required>
+                
+                <label for="link-category">Category:</label>
+                <select id="link-category" name="link-category" required>
+                    <option value="books">Books</option>
+                    <option value="courses">Courses</option>
+                    <option value="software">Software</option>
+                    <option value="games">Games</option>
+                    <option value="movies">Movies</option>
+                    <option value="music">Music</option>
+                </select>
+                
+                <button type="submit">Add Link</button>
+            </form>
         </section>
     </main>
     <footer>
-        <p style="font-size:0.8em; font-style:italic; text-align:center;">&copy; 2024 Tsunami</p>
+        <p style="padding-left:25px; font-size: small; font-style: italic;">&copy; 2024 Tsunami</p>
     </footer>
     <script src="script.js"></script>
 </body>

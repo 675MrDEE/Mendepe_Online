@@ -1,67 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Load links from localStorage if available
-    if (localStorage.getItem('links')) {
-        const links = JSON.parse(localStorage.getItem('links'));
-        links.forEach(addLinkToList);
-    }
-
-    document.getElementById('link-form')?.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const linkUrl = document.getElementById('link-url').value;
-        const linkDescription = document.getElementById('link-description').value;
-        const linkPrice = document.getElementById('link-price').value;
-        const linkCategory = document.getElementById('link-category').value;
-
-        const linkData = {
-            url: linkUrl,
-            description: linkDescription,
-            price: linkPrice,
-            category: linkCategory
-        };
-
-        addLinkToList(linkData);
-
-        // Save link to localStorage
-        const links = JSON.parse(localStorage.getItem('links')) || [];
-        links.push(linkData);
-        localStorage.setItem('links', JSON.stringify(links));
-
-        document.getElementById('link-form').reset();
-    });
-
-    document.getElementById('search-input')?.addEventListener('input', function() {
-        const filter = this.value.toLowerCase();
-        const categories = document.querySelectorAll('.category');
-
-        categories.forEach(function(category) {
-            const links = category.querySelectorAll('li');
-
-            links.forEach(function(link) {
-                const text = link.textContent.toLowerCase();
-                if (text.includes(filter)) {
-                    link.style.display = '';
-                } else {
-                    link.style.display = 'none';
-                }
-            });
-        });
-    });
-
-    function addLinkToList(linkData) {
-        const linkList = document.querySelector(`#${linkData.category}-category ul`);
-
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `
-            <a href="${linkData.url}" target="_blank">${linkData.description}</a> - PGK ${linkData.price}
-        `;
-
-        linkList.appendChild(listItem);
-    }
-
-    // Accordion functionality
     const accordions = document.querySelectorAll('.accordion');
-    accordions.forEach(function(accordion) {
+    accordions.forEach(accordion => {
         accordion.addEventListener('click', function() {
             this.classList.toggle('active');
             const panel = this.nextElementSibling;
@@ -72,5 +11,52 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Load links from localStorage if available
+    if (localStorage.getItem('links')) {
+        const links = JSON.parse(localStorage.getItem('links'));
+        links.forEach(addLinkToList);
+    }
+});
+
+// Function to add a link to the list in the DOM
+function addLinkToList(link) {
+    // Find the correct category list element in the DOM
+    const category = document.getElementById(`${link.category}-category`);
+    const list = category.querySelector('ul');
+
+    // Create a new list item
+    const listItem = document.createElement('li');
+
+    // Create a link element
+    const anchor = document.createElement('a');
+    anchor.href = link.url;
+    anchor.textContent = `${link.description} - PGK ${link.price}`;
+
+    // Append the link to the list item
+    listItem.appendChild(anchor);
+
+    // Append the list item to the list
+    list.appendChild(listItem);
+}
+
+// Handle form submission to add new links
+document.getElementById('link-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const url = document.getElementById('link-url').value;
+    const description = document.getElementById('link-description').value;
+    const price = document.getElementById('link-price').value;
+    const category = document.getElementById('link-category').value;
+
+    const link = { url, description, price, category };
+    let links = JSON.parse(localStorage.getItem('links')) || [];
+    links.push(link);
+
+    localStorage.setItem('links', JSON.stringify(links));
+
+    addLinkToList(link);
+
+    document.getElementById('link-form').reset();
 });
 
