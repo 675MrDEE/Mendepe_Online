@@ -1,3 +1,0 @@
-#!/bin/bash
-
-grep -sirl 'DADDY JUX'| xargs sed -i 's/DADDY JUX/DADDY JUX/g'
