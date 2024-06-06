@@ -1,153 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Bookstore</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        background-image: url("cool.jpeg");
-        background-size: cover; /* Ensures the image covers the entire page */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        background-position: center center;
-      }
-      header {
-        background-color: #2b6ca1;
-        color: white;
+<!DOCTYPE HTML>
+<!--
+	MëndǝPé_Online by DADDY JUX
+	mrdee.net | @mr_dee
+	Free for personal and commercial use under the CCA 3.0 license (mrdee.net/license)
+-->
+<html>
+	<head>
+		<title>MëndǝPé_Online by DADDY JUX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<div id="page-wrapper">
 
-        margin-top: 0%;
-        text-align: center;
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
 
-        width: 100%;
-      }
-      #search-bar {
-        margin: 20px auto;
-        max-width: 500px;
-        display: flex;
-        margin-top: 10%;
-      }
-      #search-bar input {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-      #search-bar button {
-        padding: 10px;
-        font-size: 16px;
-        border: none;
-        background-color: #333;
-        color: white;
-        cursor: pointer;
-        border-radius: 4px;
-        margin-left: 5px;
-        
-      }
-      #books-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 20px;
-      }
-      .book {
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        padding: 10px;
-        margin: 10px;
-        width: 200px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      .book img {
-        width: 100%;
-        height: auto;
-      }
-      .book h3 {
-        font-size: 18px;
-        margin: 10px 0;
-      }
-      .book p {
-        color: #666;
-        font-size: 14px;
-      }
+								<!-- Logo -->
+									<h1><a href="index.html" id="logo">MëndǝPé_Online</a></h1>
 
-      .engraved-text {
-        font-size: 1.5em;
-        color: #d9d9d9;
-        text-shadow: 1px 1px 1px #bbb, -1px -1px 1px #454242, -1px 1px 1px #bbb,
-          1px -1px 1px #454242;
-      }
-    </style>
-  </head>
-  <body>
-    <header
-      style="
-        margin: auto;
-        width: 98%;
-        border-radius: 10px;
-        box-shadow: #333 5px 5px 10px;
-      "
-    >
-      <h1 class="engraved-text">
-        <img
-          style="
-            filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 3));
-            float: left;
-            block-size: 50px;
-          "
-          src="tsunami.png"
-        />
-        Tsunami Online Bookstore
-      </h1>
-    </header>
-    <div style="width: 80%;" id="search-bar">
-      <input type="text" id="search-input" placeholder="Search for books..." />
-      <button onclick="filterBooks()">Search</button>
-    </div>
-    <div id="books-list">
-      <div class="book" data-title="">
-        <img src="https://rs8.seedr.cc/ff_get/5418423548/All%20About%20Space%20-%20Guide%20to%20the%20Solar%20System%20-%203rd%20Edition,%202024.pdf?st=1qhk3dMtGZ0pO00zpM9o4Q&e=1717745928" alt="All About Space - Guide to the Solar System - 3rd Edition, 2024.pdf" />
-        <h3>All About Space - Guide to the Solar System - 3rd Edition, 2024.pdf</h3>
-        <p>Author: John Doe</p>
-      </div>
-      <div class="book" data-title="Book Two">
-        <img src="https://via.placeholder.com/150" alt="Book Two" />
-        <h3>Book Two</h3>
-        <p>Author: Jane Smith</p>
-      </div>
-      <div class="book" data-title="Book Three">
-        <img src="https://via.placeholder.com/150" alt="Book Three" />
-        <h3>Book Three</h3>
-        <p>Author: Emily Johnson</p>
-      </div>
-      <div class="book" data-title="Another Book">
-        <img src="https://via.placeholder.com/150" alt="Another Book" />
-        <h3>Another Book</h3>
-        <p>Author: Michael Brown</p>
-      </div>
-      <!-- Add more book divs as needed -->
-    </div>
-    <script>
-      function filterBooks() {
-        const query = document
-          .getElementById("search-input")
-          .value.toLowerCase();
-        const books = document.querySelectorAll(".book");
+								<!-- Nav -->
+									<nav id="nav">
+										<a href="index.html">Homepage</a>
+										<a href="threecolumn.html">Books</a>
+										<a href="twocolumn1.html">Courses</a>
+										<a href="twocolumn2.html">Softwares</a>
+										<a href="onecolumn.html">Games</a>
+										<a href="onecolumn1.html">Movies</a>
+										
+									</nav>
 
-        books.forEach((book) => {
-          const title = book.getAttribute("data-title").toLowerCase();
-          if (title.includes(query)) {
-            book.style.display = "block";
-          } else {
-            book.style.display = "none";
-          }
-        });
-      }
-    </script>
-  </body>
+							</div>
+						</div>
+					</div>
+					<div id="banner">
+						<div class="container">
+							<div class="row">
+								<div class="col-6 col-12-medium">
+
+									<!-- Banner Copy -->
+										<p style="font-family:Tangerine;text-shadow:4px 4px 4px #aaa;">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
+									<!--	<a href="#" class="button-large">Download</a>
+									-->
+								</div>
+								<div class="col-6 col-12-medium imp-medium">
+
+									<!-- Banner Image -->
+										<a href="#" class="bordered-feature-image"><img src="images/banner.jpg" alt="" /></a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+			<!-- FOOTR -->
+				<div id="footr">
+					<a href="http://mailto:mrdee632@gmail.com">2024 &copy Tsunami</a>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
