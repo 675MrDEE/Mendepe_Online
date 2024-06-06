@@ -1,103 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tsunami</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <img class="img" src="tsunami.png"/>
-        <section id="search-bar">
-            <input type="text" id="search-input" placeholder="Search links...">
-        </section>
-    </header>
-    
-    <main>
-        
-        <section id="link-list" style="padding-top: 20px;">
-            <h2>Available Links</h2>
-            <div class="category" style="padding-top:20px;">
-                <button class="accordion">Books</button>
-                <div class="panel" id="books-category">
-                    <ul>
-                        <!-- Book links will be dynamically inserted here -->
-                    </ul>
-                </div>
-            </div>
-            <div class="category">
-                <button class="accordion">Courses</button>
-                <div class="panel" id="courses-category">
-                    <ul>
-                        <!-- Course links will be dynamically inserted here -->
-                    </ul>
-                </div>
-            </div>
-            <div class="category">
-                <button class="accordion">Software</button>
-                <div class="panel" id="software-category">
-                    <ul>
-                        <!-- Software links will be dynamically inserted here -->
-                    </ul>
-                </div>
-            </div>
-            <div class="category">
-                <button class="accordion">Games</button>
-                <div class="panel" id="games-category">
-                    <ul>
-                        <!-- Game links will be dynamically inserted here -->
-                    </ul>
-                </div>
-            </div>
-            <div class="category">
-                <button class="accordion">Movies</button>
-                <div class="panel" id="movies-category">
-                    <ul>
-                        <!-- Movie links will be dynamically inserted here -->
-                    </ul>
-                </div>
-            </div>
-            <div class="category">
-                <button class="accordion">Music</button>
-                <div class="panel" id="music-category">
-                    <ul>
-                        <!-- Music links will be dynamically inserted here -->
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <h1>&nbsp</h1>
-        <section id="add-link">
-            <h2>Sell a Link</h2>
-            <form id="link-form">
-                <label for="link-url">Link URL:</label>
-                <input type="url" id="link-url" name="link-url" required>
-                
-                <label for="link-description">Description:</label>
-                <input type="text" id="link-description" name="link-description" required>
-                
-                <label for="link-price">Price (PGK):</label>
-                <input type="number" id="link-price" name="link-price" required>
-                
-                <label for="link-category">Category:</label>
-                <select id="link-category" name="link-category" required>
-                    <option value="books">Books</option>
-                    <option value="courses">Courses</option>
-                    <option value="software">Software</option>
-                    <option value="games">Games</option>
-                    <option value="movies">Movies</option>
-                    <option value="music">Music</option>
-                </select>
-                
-                <button type="submit">Add Link</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p style="padding-left:25px; font-size: small; font-style: italic;">&copy; 2024 Tsunami</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Bookstore</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        background-image: url("cool.jpeg");
+        background-size: cover; /* Ensures the image covers the entire page */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position: center center;
+      }
+      header {
+        background-color: #2b6ca1;
+        color: white;
 
+        margin-top: 0%;
+        text-align: center;
+
+        width: 100%;
+      }
+      #search-bar {
+        margin: 20px auto;
+        max-width: 500px;
+        display: flex;
+        margin-top: 10%;
+      }
+      #search-bar input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      #search-bar button {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-left: 5px;
+        
+      }
+      #books-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+      .book {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .book img {
+        width: 100%;
+        height: auto;
+      }
+      .book h3 {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      .book p {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .engraved-text {
+        font-size: 1.5em;
+        color: #d9d9d9;
+        text-shadow: 1px 1px 1px #bbb, -1px -1px 1px #454242, -1px 1px 1px #bbb,
+          1px -1px 1px #454242;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      style="
+        margin: auto;
+        width: 98%;
+        border-radius: 10px;
+        box-shadow: #333 5px 5px 10px;
+      "
+    >
+      <h1 class="engraved-text">
+        <img
+          style="
+            filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 3));
+            float: left;
+            block-size: 50px;
+          "
+          src="tsunami.png"
+        />
+        Tsunami Online Bookstore
+      </h1>
+    </header>
+    <div style="width: 80%;" id="search-bar">
+      <input type="text" id="search-input" placeholder="Search for books..." />
+      <button onclick="filterBooks()">Search</button>
+    </div>
+    <div id="books-list">
+      <div class="book" data-title="Book One">
+        <img src="https://via.placeholder.com/150" alt="Book One" />
+        <h3>Book One</h3>
+        <p>Author: John Doe</p>
+      </div>
+      <div class="book" data-title="Book Two">
+        <img src="https://via.placeholder.com/150" alt="Book Two" />
+        <h3>Book Two</h3>
+        <p>Author: Jane Smith</p>
+      </div>
+      <div class="book" data-title="Book Three">
+        <img src="https://via.placeholder.com/150" alt="Book Three" />
+        <h3>Book Three</h3>
+        <p>Author: Emily Johnson</p>
+      </div>
+      <div class="book" data-title="Another Book">
+        <img src="https://via.placeholder.com/150" alt="Another Book" />
+        <h3>Another Book</h3>
+        <p>Author: Michael Brown</p>
+      </div>
+      <!-- Add more book divs as needed -->
+    </div>
+    <script>
+      function filterBooks() {
+        const query = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        const books = document.querySelectorAll(".book");
+
+        books.forEach((book) => {
+          const title = book.getAttribute("data-title").toLowerCase();
+          if (title.includes(query)) {
+            book.style.display = "block";
+          } else {
+            book.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
