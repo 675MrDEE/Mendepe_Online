@@ -1,77 +1,67 @@
-<!DOCTYPE HTML>
-<!--
-	MëndǝPé_Online by DADDY JUX
-	mrdee.net | @mr_dee
-	Free for personal and commercial use under the CCA 3.0 license (mrdee.net/license)
--->
-<html>
-	<head>
-		<title>MëndǝPé_Online by DADDY JUX</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fiveby5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><span id="fiveBy5">fiveBy5</span><h4>eBuk</h4></h1>
+        <nav>
+            <ul class="tabs">
+                <li id="tab"><a data-tab-target="#home" class="active tab">Home</a></li>
+                <li id="tab"><a data-tab-target="#about" class="tab">About</a></li>
+                <li id="tab"><a data-tab-target="#library" class="tab">Library</a></li>
+                <li id="tab"><a data-tab-target="#contact" class="tab">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<div id="content">
+    <section id="home" data-tab-content class="active">
+        <h2><span id="fiveBy5">fiveBy5</span><span id="eBuk">eBuk</span> Online BukStua</h2>
+        <p>Discover our collection of eBooks. <!-- Register for K5.00 only.$ --><br/>
+        <!-- Register now and download the book you need. --></p>
+    </section>
 
-			<!-- Header -->
-				<section id="header">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
+    <section id="about" data-tab-content>
+        <h2>About Us</h2>
+        <p>We provide a wide range of eBooks in order for unfortunate students in Papua New Guinea to enhance their learning experience.<br/>
+            <!-- <br/>We serve users only from 5am - 5pm. -->
+        </p>
+    </section>
 
-								<!-- Logo -->
-									<h1><a href="index.html" id="logo">MëndǝPé_Online</a></h1>
+    <section id="library" data-tab-content>
+        <h2>Library
+        <input type="text" id="search-bar" placeholder="Search for books..."></h2>
+        <div class="book-list">
+            <!-- Books will be dynamically loaded here -->
+        </div>
+    </section>
 
-								<!-- Nav -->
-									<nav id="nav">
-										<a href="index.html">Homepage</a>
-										<a href="threecolumn.html">Books</a>
-										<a href="twocolumn1.html">Courses</a>
-										<a href="twocolumn2.html">Softwares</a>
-										<a href="onecolumn.html">Games</a>
-										<a href="onecolumn1.html">Movies</a>
-										
-									</nav>
+    <section id="contact" data-tab-content>
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-							</div>
-						</div>
-					</div>
-					<div id="banner">
-						<div class="container">
-							<div class="row">
-								<div class="col-6 col-12-medium">
+</div>
+    
+    <footer>
+        <p>An initiative by Mr. DEE &copy; 2024 🙃</p>
+    </footer>
 
-									<!-- Banner Copy -->
-										<p style="font-family:Tangerine;text-shadow:4px 4px 4px #aaa;">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</p>
-									<!--	<a href="#" class="button-large">Download</a>
-									-->
-								</div>
-								<div class="col-6 col-12-medium imp-medium">
-
-									<!-- Banner Image -->
-										<a href="#" class="bordered-feature-image"><img src="images/banner.jpg" alt="" /></a>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-
-			<!-- FOOTR -->
-				<div id="footr">
-					<a href="http://mailto:mrdee632@gmail.com">2024 &copy Tsunami</a>
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <script src="script.js"></script>
+</body>
 </html>

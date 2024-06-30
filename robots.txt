@@ -1,7 +1,0 @@
-Sitemap: http://www.wiltshire.ac.uk/sitemap.xml
-User-agent: *
-Disallow: /dbhelp/
-Disallow: /download/
-Disallow: /error/
-Disallow: /include/
-Disallow: /induction/
