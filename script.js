@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const books = [
         { title: "A Wolf at the Door & Other Retold Fairy Tales", author: "Ellen Datlow", img: "https://m.media-amazon.com/images/I/81sPppXf7bL._SY425_.jpg", link: "https://mega.nz/file/pHt0kKRA#ZQwDlLtnti3EQyrFjJF0mJzL8A6RuUG0d5GVPRyaYlg" },
-        { title: "Book 2", author: "Author 2", img: "https://via.placeholder.com/150", link: "#" },
-        { title: "Book 3", author: "Author 3", img: "https://via.placeholder.com/150", link: "#" },
-        { title: "Book 4", author: "Author 4", img: "https://via.placeholder.com/150", link: "#" },
-        { title: "Book 5", author: "Author 5", img: "https://via.placeholder.com/150", link: "#" },
-        { title: "Book 6", author: "Author 6", img: "https://via.placeholder.com/150", link: "#" },
-        { title: "Book 7", author: "Author 6", img: "https://via.placeholder.com/150", link: "#" },
-        { title: "Book 8", author: "Author 6", img: "https://via.placeholder.com/150", link: "#" },
-        { title: "Book 9", author: "Author 6", img: "https://via.placeholder.com/150", link: "#" },
+        { title: "Animal Farm", author: "George Orwell", img: "https://m.media-amazon.com/images/G/01/apparel/rcxgs/tile._CB483369110_.gif", link: "https://mega.nz/file/ITkTWRKS#GWyRKv7LV5UXvXbDd4VjcXBgBqz2nUJyIPdNLeOIauU" },
+        { title: "Chinese Fairy Tales and Fantasies", author: "Moss Roberts", img: "https://m.media-amazon.com/images/G/01/apparel/rcxgs/tile._CB483369110_.gif", link: "https://mega.nz/file/4W1wUKhQ#eNeLs5f-j1jdcAemYgLqB-8BZa-R69cLSISMvFPmpm4" },
+        { title: "Dracula", author: "Bram Stoker", img: "https://m.media-amazon.com/images/I/41Dv6UvxAKL._SY445_SX342_.jpg", link: "https://mega.nz/file/JKNQkYbQ#Wm8x-ff4SMvpb3OIZ5iWkHNcxkwT55RllZIcBLOuO4A" },
+        { title: "Gullivers Travels", author: "Johnathan Swift", img: "https://m.media-amazon.com/images/I/91KxvSbU73L._SY425_.jpg", link: "https://mega.nz/file/5PV0SLyK#yA5FVGVdoOVhs3apVUBOcCFKqAA2UXL3t4FZIoMzxho" },
+        { title: "The Great Gatsby", author: "Scott Fitzgerald", img: "https://m.media-amazon.com/images/G/01/apparel/rcxgs/tile._CB483369110_.gif", link: "https://mega.nz/file/tGMGSDzR#RvHI_JgVjI-n8s0xzB37FRjtgnK9Agoctl5rH59_zs8" },
+        { title: "The Old Man and the Sea", author: "Ernest Hemingway", img: "https://m.media-amazon.com/images/I/71KloredONL._SY425_.jpg", link: "https://mega.nz/file/gGtVRZSI#wCCambUfrFWG08b0yo1OBXoIGr32TmfOGm9Pj-must8" },
+        { title: "To Kill a Mockingbird", author: "Harper Lee", img: "https://mega.nz/file/gGtVRZSI#wCCambUfrFWG08b0yo1OBXoIGr32TmfOGm9Pj-must8", link: "https://mega.nz/file/hf1lQTpQ#Qv1CRXeekxujXxs9swZzZtjpyRSxCfNedHmJBJa3UJQ" },
+        { title: "The Trachtenberg Speed System of Basic Mathematics", author: "Jakow Trachtenberg", img: "https://m.media-amazon.com/images/G/01/apparel/rcxgs/tile._CB483369110_.gif", link: "https://mega.nz/file/cStzEI5B#Il2BdSTQ72h0-1WdQn7RkmqJ3ruLAE82owdXGjC8gj8" },
         { title: "Book 10", author: "Author 6", img: "https://via.placeholder.com/150", link: "#" },
         { title: "Book 11", author: "Author 6", img: "https://via.placeholder.com/150", link: "#" }
 
