@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const books = [
-        { title: "Book 1", author: "Author 1", img: "https://via.placeholder.com/150", link: "#" },
+        { title: "A Wolf at the Door & Other Retold Fairy Tales", author: "Ellen Datlow", img: "https://m.media-amazon.com/images/I/81sPppXf7bL._SY425_.jpg", link: "https://mega.nz/file/pHt0kKRA#ZQwDlLtnti3EQyrFjJF0mJzL8A6RuUG0d5GVPRyaYlg" },
         { title: "Book 2", author: "Author 2", img: "https://via.placeholder.com/150", link: "#" },
         { title: "Book 3", author: "Author 3", img: "https://via.placeholder.com/150", link: "#" },
         { title: "Book 4", author: "Author 4", img: "https://via.placeholder.com/150", link: "#" },
